@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 } */
+
+.ex {
+  color: blue;
+}
+.navbar ul{
+  background-color: whitesmoke;
+  color: rgb(0, 0, 0);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25vh;
+}
