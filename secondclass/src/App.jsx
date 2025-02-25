@@ -1,5 +1,9 @@
 import myimg from './insta photo.jpg'
 import './App.css'
+import {About,Data} from './About.jsx'
+import Contact from './Contact.jsx'
+import Service  from './Service.jsx'
+
 
 function App() {
   let name ="dhruv"
@@ -26,7 +30,14 @@ function App() {
      <h1 style={{backgroundColor:"red",color:"white"}}>my name is {name}</h1>
      <h1 style={st} >my age is {age}</h1>
      <h1 className='ex'>sdjhfbfaekjlfhbvjehfverjfh</h1>
+
+     <About />  <Data />
+     <Contact />
+     <Service />
+
      </div>
+
+    
 
   )
 }
