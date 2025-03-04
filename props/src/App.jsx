@@ -6,6 +6,7 @@ function App(){
   return (
     <>
      <Child1 name="Ayush" />
+     
     </>
   )
 }
