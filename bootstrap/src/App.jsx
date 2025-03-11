@@ -23,6 +23,7 @@ function App(){
         </h1></Col>
       </Row>
     </Container>
+    
     </>
   )
 }
