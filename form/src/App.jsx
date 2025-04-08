@@ -1,13 +1,14 @@
 
 
 import Form from './Form'
-import React,{ useState } from 'react'
+import React,{ useEffect, useState } from 'react'
 
 const App = () => {
   let [frmdata,setfrmdata]= useState({
     username:"",address:""
   })
     
+  let [userdata,setUserdata]=useState({})
 
   function Inputvalue(e){
     const {name,value} = e.target
@@ -19,10 +20,16 @@ const App = () => {
 
   function finalsubmit(e){
     e.preventDefault()
-    console.log(frmdata);
+ 
     localStorage.setItem("userdata",JSON.stringify(frmdata))
     
+    ///vvb
   }
+
+  useEffect(()=>{
+    let localdata= JSON.parse(localStorage.getItem('userdata'))
+    setUserdata(localdata)
+  },[finalsubmit])
 
   return (
     <>
@@ -51,7 +58,11 @@ const App = () => {
 
     
 
-     <Form/>
+     
+     <h1>name :{userdata.username}</h1>
+     <h1>address :{userdata.address}</h1>
+     <h1>mobile :{userdata.mobile}</h1>
+     <h1>email :{userdata.email}</h1>
     </>
   )
 }
